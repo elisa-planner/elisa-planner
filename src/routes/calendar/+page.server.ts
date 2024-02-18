@@ -1,5 +1,5 @@
 import type {PageServerLoad} from './$types'
-import type Task from '$lib/types/task.interface';
+import type {Task} from '$lib/types/task.interface';
 
 
 export const load: PageServerLoad = async () => {

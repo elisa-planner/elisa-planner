@@ -1,4 +1,4 @@
-export default interface Task {
+export interface Task {
     id: number;
     pos?: {row: number, col: number};
     text: string;
@@ -7,3 +7,9 @@ export default interface Task {
     backgroundColor?: string;
     borderColor?: string;
 }
+
+export interface TaskForm {
+    task: string;
+    backgroundColor: string;
+    borderColor: string;
+};
