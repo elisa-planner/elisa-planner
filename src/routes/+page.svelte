@@ -1,5 +1,5 @@
 <script>
-	import DraggableCard from './../components/draggable_card.svelte';
+	import DraggableCard from '$components/draggable_card.svelte';
 	import { dropzone, draggable } from '$lib/dnd';
 	import './global.css';
 
@@ -29,7 +29,7 @@
 
 		<ul class="cards">
 			{#each data.possibleCards as card}
-				<DraggableCard card={card}/>
+				<DraggableCard card={card} source={'source'}/>
 			{/each}
 		</ul>
 	</div>
@@ -116,13 +116,7 @@
 		display: flex;
 	}
 
-	li {
-		padding: 1rem;
-		background-color: var(--sk-back-1);
-		border: 1px solid black;
-		border-radius: 0.5rem;
-		border-color: var(--sk-back-5);
-	}
+
 
 	.grid {
 		flex: 5;
@@ -156,12 +150,6 @@
 	.cards {
 		flex-direction: column;
 		row-gap: 0.4rem;
-	}
-
-	.card:hover {
-		outline: 0.1rem solid var(--sk-theme-3);
-		outline-offset: 0.25rem;
-		z-index: 1;
 	}
 
 	

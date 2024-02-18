@@ -1,5 +1,4 @@
-export interface DraggableCard {
+export default interface DraggableCard {
     id: string;
     title: string;
-    source: string;
 }

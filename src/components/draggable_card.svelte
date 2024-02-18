@@ -1,11 +1,15 @@
 <script lang="ts">
-    import { draggable } from 'svelte-dnd-action';
-    import { DraggableCard } from '$lib/types/draggable_card';
-    
-    export let card: DraggableCard;
-    export let source: string;
+	import { dropzone, draggable } from '$lib/dnd';	
+    import type Task from '$lib/types/task.interface';
+
+    export let card: Task;
 </script>
 
-<li class="card" use:draggable={[card.id, source]}>
-    {card.title}
-</li>	
+<div 
+	class="truncate text-black font-medium p-2 border-2 border-solid rounded-md border-sk-back-5 w-[9rem] text-center 
+	hover:outline-sk-theme-3 hover:outline-offset-0.25rem hover:z-10" 
+	style="background-color: {card.backgroundColor ?? '#ffffff'}; border-color: {card.borderColor ?? card.backgroundColor ?? '#ffffff'};"
+	use:draggable={[card.id]}>
+    {card.text} 
+</div>	
+

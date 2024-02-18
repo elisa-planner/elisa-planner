@@ -1,0 +1,8 @@
+{
+	"/": [
+		"src/routes/+page.server.js"
+	],
+	"/calendar": [
+		"src/routes/calendar/+page.server.ts"
+	]
+}

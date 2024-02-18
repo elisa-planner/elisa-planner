@@ -6,6 +6,24 @@
 			],
 			"$lib/*": [
 				"../src/lib/*"
+			],
+			"$components": [
+				"../src/components"
+			],
+			"$components/*": [
+				"../src/components/*"
+			],
+			"$stores": [
+				"../src/stores"
+			],
+			"$stores/*": [
+				"../src/stores/*"
+			],
+			"$utils": [
+				"../src/utils"
+			],
+			"$utils/*": [
+				"../src/utils/*"
 			]
 		},
 		"rootDirs": [
@@ -23,7 +41,8 @@
 		"moduleResolution": "node",
 		"module": "esnext",
 		"noEmit": true,
-		"target": "esnext"
+		"target": "esnext",
+		"ignoreDeprecations": "5.0"
 	},
 	"include": [
 		"ambient.d.ts",
